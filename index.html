@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web component</title>
+    <script src="./WC.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <app-nc texto="Soy un párrafo por atributo">            
+        </app-nc>
+    </header>
+
+    <h1>Este es mi título dentro del dom de la página</h1>
+    <app-lista 
+    texto="Nombre" 
+    url="https://swapi.dev/api/people/"
+    campo="name"
+    ></app-lista>
+
+    <app-lista 
+    texto="Altura" 
+    url="https://swapi.dev/api/people/"
+    campo="height"
+    ></app-lista>
+
+</body>
+</html>

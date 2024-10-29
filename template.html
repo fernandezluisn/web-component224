@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo template</title>
+    <script src="./WC.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Ejemplo cartas pokemon</h1>
+    </header>
+
+    <template id= "card-template">
+        <style>
+            .card{
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                padding: 16px;
+                width: 10rem;
+                box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.15);
+                background-color: yellow;
+                margin: 1dvw;
+            }
+
+            .card-title{
+                font-size: 1.5em;
+                margin-bottom: 8px;
+            }
+
+            .card-content img{
+                max-width: 100%;
+                border-radius: 10px;
+            }
+        </style>
+
+        <div class="card">
+            
+            <div class="card-title"> 
+                <slot name="title"></slot> 
+            </div>
+            
+            <div class="card-content"> 
+                <slot name="content"></slot> 
+            </div>
+        </div>
+
+    </template>
+
+    <div id="muestrario"></div>
+</body>
+</html>
